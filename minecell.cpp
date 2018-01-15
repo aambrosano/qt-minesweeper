@@ -9,13 +9,11 @@
 #include "minecell.h"
 
 MineCell::MineCell(int size, QWidget *parent)
-    : QPushButton(parent), opened(false), value(0), bomb(false), marked(false)
+    : QPushButton(parent), value(0), bomb(false), marked(false), opened(false)
 {
     this->cell = {0.0, 0.0, (double)size, (double)size};
     this->setMinimumSize(size, size);
     this->setMaximumSize(size, size);
-
-    connect(this, SIGNAL(clicked(bool)), this, SLOT(onClicked(bool)));
 }
 
 void MineCell::addNeighbour(MineCell *neighbour)

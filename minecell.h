@@ -44,11 +44,11 @@ private:
     bool rightClick;
 
     // This is the model
+    int value;
+
     bool bomb;
     bool marked;
     bool opened;
-
-    int value;
 };
 
 #endif // MINECELL_H

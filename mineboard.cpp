@@ -25,7 +25,7 @@ MineBoard::MineBoard(int rows, int cols, QWidget *parent)
     for (int i = 0; i < m_rows; i++) {
         for (int j = 0; j < m_cols; j++) {
             MineCell *cell = new MineCell(SIZE, this);
-            if (qrand() % 100 > 88) {
+            if (qrand() % 100 > 80) {
                 cell->setBomb();
                 bombLCD->display(bombLCD->intValue() + 1);
             }
